@@ -9,6 +9,7 @@
 /* фон футера #2F303A */
 /* колір рамок #EEEEEE */
 /* колір рамки шапки  #ECECEC */
+/* колір фону соцмереж у футері rgba(255, 255, 255, 0.1) */
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -21,6 +22,7 @@
   --footer-text-copyright: rgba(255, 255, 255, 0.4);
   --border-color: #eeeeee;
   --border-header-color: #ececec;
+  --bg-social-networks-footer: rgba(255, 255, 255, 0.1);
 }
 html {
   box-sizing: border-box;
@@ -96,6 +98,10 @@ img {
 .link {
   text-decoration: none;
 }
+a[aria-label] {
+  text-decoration: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -185,6 +191,23 @@ header {
 .contacts .link {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.contacts .mail::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  background-image: url(../img/icon-mail.svg);
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+.contacts .tell::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  background-image: url(../img/tell.svg);
+  margin-right: 10px;
 }
 
 /* герой */
@@ -282,6 +305,28 @@ header {
 }
 .advantage-list > li {
   width: calc((100% - 3 * 30px) / 4);
+}
+.advantages-list-item::before {
+  content: '';
+  display: block;
+  margin-bottom: 30px;
+  height: 120px;
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-color: var(--bg-button-color);
+  background-position: center;
+}
+.advantages-list-item:nth-child(1)::before {
+  background-image: url(../img/details.svg);
+}
+.advantages-list-item:nth-child(2)::before {
+  background-image: url(../img/punctuality.svg);
+}
+.advantages-list-item:nth-child(3)::before {
+  background-image: url(../img/planning.svg);
+}
+.advantages-list-item:nth-child(4)::before {
+  background-image: url(../img/modern-tech.svg);
 }
 /* деятельность секция */
 .section .activity-title {
@@ -409,6 +454,38 @@ footer {
 }
 .join-networks > li + li {
   margin-left: 10px;
+}
+.join-networks a[aria-label] {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--bg-social-networks-footer);
+  background-repeat: no-repeat;
+}
+.join-networks a[aria-label]:hover,
+:focus {
+  background-color: var(--accent-color);
+}
+.instagram {
+  background-image: url(../img/instagram-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.twitter {
+  background-image: url(../img/twitter-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.facebook {
+  background-image: url(../img/facebook-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.linkedin {
+  background-image: url(../img/linkedin-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .join-header {
   display: block;
