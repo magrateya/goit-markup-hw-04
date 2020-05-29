@@ -10,6 +10,7 @@
 /* колір рамок #EEEEEE */
 /* колір рамки шапки  #ECECEC */
 /* колір фону соцмереж у футері rgba(255, 255, 255, 0.1) */
+/* колір іконок соцмереж #AFB1B8 */
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -23,6 +24,7 @@
   --border-color: #eeeeee;
   --border-header-color: #ececec;
   --bg-social-networks-footer: rgba(255, 255, 255, 0.1);
+  --icon-socio-color: #afb1b8;
 }
 html {
   box-sizing: border-box;
@@ -185,30 +187,41 @@ header {
 .contacts > li:not(:last-child) {
   margin-right: 30px;
 }
-.contacts img {
-  display: inline;
-}
 .contacts .link {
+  display: flex;
+  align-items: center;
+}
+.contacts .icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.contacts .icon:hover {
+  fill: var(--accent-color);
+}
+/* .contacts .link {
   padding-top: 32px;
   padding-bottom: 32px;
+  display: inline-flex;
+  align-items: center;
 }
-.contacts .mail::before {
+.contacts .link::before {
   content: '';
   display: inline-block;
-  width: 16px;
-  height: 11px;
-  background-image: url(../img/icon-mail.svg);
   background-repeat: no-repeat;
   margin-right: 10px;
 }
+.contacts .mail::before {
+  content: '';
+  width: 16px;
+  height: 11px;
+  background-image: url(../img/icon-mail.svg);
+}
 .contacts .tell::before {
   content: '';
-  display: inline-block;
   width: 10px;
   height: 15px;
   background-image: url(../img/tell.svg);
-  margin-right: 10px;
-}
+} */
 
 /* герой */
 .hero .hero-title {
@@ -306,7 +319,17 @@ header {
 .advantage-list > li {
   width: calc((100% - 3 * 30px) / 4);
 }
-.advantages-list-item::before {
+.advantages-list-item .icon {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 30px;
+  background-color: var(--bg-button-color);
+  border-radius: 4px;
+}
+/* .advantages-list-item::before {
   content: '';
   display: block;
   margin-bottom: 30px;
@@ -327,7 +350,7 @@ header {
 }
 .advantages-list-item:nth-child(4)::before {
   background-image: url(../img/modern-tech.svg);
-}
+} */
 /* деятельность секция */
 .section .activity-title {
   color: var(--primary-white-color);
@@ -378,8 +401,7 @@ header {
 }
 .team-list img {
   margin-bottom: 30px;
-
-  /* max-width: 100%; */
+  border-radius: 4px 4px 0px 0px;
 }
 .team-members {
   color: var(--title-text-color);
@@ -400,17 +422,42 @@ header {
 .team-pages {
   display: flex;
   justify-content: center;
+  margin-bottom: 24px;
 }
 .team-pages > li + li {
   margin-left: 11px;
 }
 
+/* піктограми соцмереж команди та ФУТЕРА */
+.link-socio {
+  display: block;
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--bg-social-networks-footer);
+  fill: var(--icon-socio-color);
+}
+.link-socio:hover,
+.link-socio:focus {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+
+/* секція клієнти */
 .clients-list {
   display: flex;
   justify-content: center;
 }
 .clients-list > li + li {
   margin-left: 30px;
+}
+.link-client {
+  display: block;
+}
+.client-logo {
+  width: 170px;
+  height: 90px;
 }
 
 /* футер */
@@ -455,6 +502,10 @@ footer {
 .join-networks > li + li {
   margin-left: 10px;
 }
+.join-networks .icon {
+  fill: var(--primary-white-color);
+}
+/* 
 .join-networks a[aria-label] {
   display: inline-block;
   width: 44px;
@@ -486,7 +537,7 @@ footer {
   background-image: url(../img/linkedin-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
 .join-header {
   display: block;
   margin-bottom: 21px;
