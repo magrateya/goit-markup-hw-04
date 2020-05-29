@@ -256,19 +256,7 @@ header {
   line-height: 1.9;
   letter-spacing: 0.06em;
 }
-/* div.hero-text */
 
-/* .hero-text {
-  width: 770px;
-  max-height: 100%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-
-  outline: 2px solid red;
-} */
 .hero {
   height: 605px;
   max-width: 1600px;
@@ -321,7 +309,7 @@ header {
 .advantage-list > li {
   width: calc((100% - 3 * 30px) / 4);
 }
-.advantages-list-item .icon {
+/* .advantages-list-item .icon {
   display: block;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -330,8 +318,8 @@ header {
   margin-bottom: 30px;
   background-color: var(--bg-button-color);
   border-radius: 4px;
-}
-/* .advantages-list-item::before {
+} */
+.advantages-list-item::before {
   content: '';
   display: block;
   margin-bottom: 30px;
@@ -352,7 +340,7 @@ header {
 }
 .advantages-list-item:nth-child(4)::before {
   background-image: url(../img/modern-tech.svg);
-} */
+}
 /* деятельность секция */
 .section .activity-title {
   color: var(--primary-white-color);
